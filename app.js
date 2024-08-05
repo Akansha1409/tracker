@@ -1,3 +1,5 @@
+require('dotenv').config(); // Load environment variables from .env file
+
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -39,7 +41,7 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-// Start the server
-server.listen(3000, () => {
-    console.log(`Server is running on http://localhost:3000`);
+const port = process.env.PORT || 3001;
+server.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
