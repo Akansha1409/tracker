@@ -41,13 +41,9 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-<<<<<<< HEAD
 const port = process.env.PORT || 3001;
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-=======
-// Start the server
-server.listen(3001, () => {
-    console.log(`Server is running on http://localhost:3001`);
->>>>>>> 0e0818ccaff138f339a7da29df1cb0e94f258829
+
+
 });
