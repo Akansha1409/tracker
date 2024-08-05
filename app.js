@@ -13,7 +13,7 @@ const io = socketio(server);
 app.set("view engine", "ejs");
 
 // Serve static files from the public directory
-app.set(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "views")));
 
 // Handle socket connections
 io.on("connection", (socket) => {
